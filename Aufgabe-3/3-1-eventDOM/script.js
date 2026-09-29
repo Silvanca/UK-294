@@ -28,6 +28,23 @@ style.textContent = `
         background-color: green;
         margin-top: 1rem;
     }
+    .goal{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 150px;
+        border: 3px solid white;
+        box-sizing: border-box;
+    }
+    .goal.left{
+        left: 0;
+        border-left: none;
+    }
+    .goal.right{
+        right: 0;
+        border-right: none;
+    }
 `
 document.head.appendChild(style); 
 
@@ -37,6 +54,14 @@ feld.style.position = "relative";
 document.body.append(feld);
 
 feld.addEventListener("mousedown", getPosition)
+
+const goalLeft = document.createElement("div");
+goalLeft.classList.add("goal", "left");
+feld.append(goalLeft);
+
+const goalRight = document.createElement("div");
+goalRight.classList.add("goal", "right");
+feld.append(goalRight);
 
 let ballcss = document.createElement("style")
 ballcss.textContent = `
@@ -61,8 +86,25 @@ function getPosition(event){
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
 
-    ball.style.left = x + "px";
-    ball.style.top = y + "px";
+    ball.style.left = (x - ball.offsetWidth / 2) + "px";
+    ball.style.top = (y - ball.offsetHeight / 2) + "px";
+
+    if (isInGoal(goalLeft) || isInGoal(goalRight)){
+        count1++;
+        counter.textContent = count1;
+        resetBall();
+    }
+}
+
+function isInGoal(goal){
+    const b = ball.getBoundingClientRect();
+    const g = goal.getBoundingClientRect();
+
+    // Mittelpunkt des Balls
+    const cx = b.left + b.width / 2;
+    const cy = b.top + b.height / 2;
+
+    return cx > g.left && cx < g.right && cy > g.top && cy < g.bottom;
 }
 
 function hello(){
