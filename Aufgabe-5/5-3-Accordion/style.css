@@ -1,0 +1,33 @@
+.accordion {
+  margin: 10rem auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.accordion-item {
+  background-color: #0091ff;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-item h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  background: #0e5588;
+  border-radius: 0 0 10px 10px;
+  margin-top: 5px;
+}
+
+.accordion-content.show {
+  display: block;
+}
