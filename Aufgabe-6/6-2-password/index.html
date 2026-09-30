@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form class="form" name="Login">
+        <label for="email">Email</label>
+        <input type="email" name="Email" id="email" required>
+
+        <label for="password">Passwort</label>
+        <input type="password" name="password" id="password" minlength="8" required>
+
+        <label for="passwordConfirm">Passwort bestätigung</label>
+        <input type="password" name="passwordConfirm" id="passwordConfirm">
+
+        <label for="agb">ABG Akzeptieren</label>
+        <input type="checkbox" id="agb" required>
+
+        <button type="submit" id="submit">Registrierung</button>
+    </form>
+</body>
+</html>
