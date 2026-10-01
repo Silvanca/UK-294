@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="friends" class="friends">
+        <h1>My friends</h1>
+    </div>
+    <div>
+        <h1>Add a new friend</h1>
+        <form class="form" name="AddFriend">
+            <label for="surname">Vorname</label>
+            <input id="surname" name="surname" required>
+
+            <label for="name">Nachname</label>
+            <input id="name" name="name" required>
+
+            <label for="streat">Strasse</label>
+            <input id="streat" name="streat" required>
+
+            <label for="plz">PLZ</label>
+            <input id="plz" name="plz" required>
+
+            <label for="city">Ort</label>
+            <input id="city" name="city" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" required>
+
+            <label for="anrede">Anrede</label>
+            <select id="anrede" name="anrede" required>
+                <option value="du">Du</option>
+                <option value="sie">Sie</option>
+            </select>
+
+            <label for="know">Von wo kennen wir uns?</label>
+            <select id="know" name="know" required>
+                <option value="privat">Privat</option>
+                <option value="school">Schule</option>
+                <option value="work">Arbeit</option>
+            </select>
+
+            <button type="submit">Submit</button>
+            <button type="reset">reset</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+.label, input, select{
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 30px 8px;
+    background-color: pink;
+    font-family: Georgia, serif;
+}
+
+/* Hauptüberschrift */
+#friends > h1 {
+    color: #b52f4a;
+    font-size: 46px;
+    margin: 0 0 30px 0;
+}
+
+/* Freund-Karten */
+.friends {
+    width: 520px;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+
+    background-color: #fff0f3;
+    border-radius: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Name des Freundes */
+.friends h2 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* Adresse usw. */
+.friends p {
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+/* E-Mail */
+.friends a {
+    color: blue;
+}
+
+
+/* Überschrift Formular */
+body > div:nth-child(2) h1 {
+    color: #b52f4a;
+    font-size: 34px;
+}
+
+
+/* Formular */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Labels */
+.form label {
+    color: #b52f4a;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+/* Inputs und Selects */
+.form input,
+.form select {
+    width: 200px;
+    height: 30px;
+    box-sizing: border-box;
+
+    font-size: 16px;
+    padding: 4px;
+
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.form button {
+    font-size: 16px;
+    padding: 4px 8px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
