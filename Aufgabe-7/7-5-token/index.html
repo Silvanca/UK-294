@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h2>Kommentar hinzufügen</h2>
+    <form name="commentform" id="commentform"></form>
+    <label for="username">Benutzername (3–16 Zeichen):</label>
+    <input type="text" id="username" name="username" minlength="3" maxlength="16" required>
+
+    <label for="message">Nachricht (3–300 Zeichen):</label>
+    <textarea id="message" name="message" minlength="3" maxlength="300" required></textarea>
+
+    <button type="submit">Absenden</button>
+</body>
+</html>

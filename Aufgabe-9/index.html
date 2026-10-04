@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <form name="Login">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="Email">
+
+            <label for="password">Passwort</label>
+            <input name="password" id="password" required placeholder="Password">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="add">
+        <h1>Tasks</h1>
+        <form name="addTask" id="addTask">
+            <label for="title"></label>
+            <input name="title" id="title" required>
+            <label for="status"></label>
+            <select name="status" id="status">
+                <option value="Noch offen">Noch offen</option>
+                <option value="Erledigt">Erledigt</option>
+            </select>
+            <button type="submit" name="submit">Add</button>
+        </form>
+        <hr>
+        <ul id="taskList"></ul>
+    </div>
+</body>
+</html>
